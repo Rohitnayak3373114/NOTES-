@@ -1,34 +1,65 @@
+
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>notes </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="header"> 
-        <div class="notes">NOTES</div>
-        <div class="img"><a href="" > <img src="./imagelogo.webp" width="40px"></a></div>
+    <!-- HOME SCREEN -->
+    <section id="home">
+        <header>My Notes</header>
 
+        <div class="container">
+            <p class="subtitle">Choose your workspace</p>
 
-    </div>
-    <div id="nor-space">
-        <h2 style="margin-bottom:0%" >NORMAL</h2>
-        <h4 style="margin:0%">SPACE</h4>
+            <div class="spaces" id="spaces"></div>
 
-    </div>
+            <div class="create-space" onclick="createSpace()">
+                + Create Custom Space
+            </div>
+        </div>
+    </section>
 
-    <div id="prof-space">
-        <h2 style="margin-bottom:0%">PROFESSIONAL</h2>
-        <h4 style="margin:0%">SPACE</h4>
+    <!-- SPACE SCREEN -->
+    <section id="spaceScreen" class="hidden">
 
-    </div>
-    <div id="custom">
-        <h5>Create custom space</h5>
-    </div>
-    
+        <div class="topbar">
+            <span class="back" onclick="goHome()">←</span>
+            <h2 id="spaceTitle">Normal Space</h2>
+        </div>
+
+        <div class="notes-container" id="notesContainer"></div>
+
+        <button class="add-btn" onclick="newNote()">+</button>
+    </section>
+
+    <!-- NOTE EDITOR -->
+    <section id="editorScreen" class="hidden">
+
+        <div class="topbar">
+            <span class="back" onclick="closeEditor()">←</span>
+            <h2>Write Note</h2>
+        </div>
+
+        <div class="editor">
+            <input id="noteTitle" placeholder="Enter title...">
+
+            <textarea id="noteContent"
+                placeholder="Start writing your script here..."></textarea>
+        </div>
+
+        <div class="editor-actions">
+            <button class="save" onclick="saveNote()">Save Note</button>
+            <button class="delete" onclick="deleteNote()">Delete</button>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
