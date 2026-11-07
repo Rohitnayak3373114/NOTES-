@@ -1,0 +1,20 @@
+body{
+    background-color:rgb(0, 88, 123)
+}
+#header{
+    background-color:rgb(0, 73, 113);
+    display:flex;
+    justify-content:space-between;
+    border-radius:5px;
+
+
+
+}
+.notes{
+    color:rgb(3, 6, 34);
+    font-size: 40px;
+
+}
+.img{
+    
+}
